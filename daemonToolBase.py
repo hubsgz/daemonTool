@@ -39,6 +39,7 @@ class daemonToolBase(object):
 
         self.p_start()
         while True:
+            time.sleep(10)
             if self._stop:
                 self.p_stop()
                 self.log('stoped')
@@ -61,7 +62,6 @@ class daemonToolBase(object):
                 else:
                     self.notoknum=0
 
-            time.sleep(10)
 
     def p_is_ok(self):
         '''
